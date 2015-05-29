@@ -1,0 +1,17 @@
+<h1>Listing emojis</h1>
+
+<% link_to 'New emoji', new_emoji_path %>
+
+<table>
+  <tr>
+    <th>Emoji</th>
+    <th>Definition</th>
+  </tr>
+
+  <% @emojis.each do |emoji| %>
+    <tr>
+      <td><%= emoji.symbol %></td>
+      <td><%= emoji.definition %></td>
+    </tr>
+  <% end %>
+</table>
